@@ -100,6 +100,8 @@ function App() {
         setScreen('app');
       }
       setLoading(false);
+    }).catch(() => {
+      if (active) setLoading(false);
     });
     const { data: listener } = supabase.auth.onAuthStateChange((_, nextSession) => {
       (async () => {
