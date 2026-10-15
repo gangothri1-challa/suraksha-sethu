@@ -82,7 +82,7 @@ function App() {
   const copy = useMemo(() => getCopy(language), [language]);
 
   useEffect(() => {
-    const timeout = window.setTimeout(() => setShowSplash(false), 5000);
+    const timeout = window.setTimeout(() => setShowSplash(false), 2500);
     return () => window.clearTimeout(timeout);
   }, []);
 
