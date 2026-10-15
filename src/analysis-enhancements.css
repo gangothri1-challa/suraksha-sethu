@@ -1,0 +1,8 @@
+.evidence-heading { margin-top: 22px !important; }
+.evidence-heading svg { color: var(--blue) !important; }
+.evidence-list { display: grid; gap: 7px; }
+.evidence-list span { display: block; padding: 9px 11px; border-left: 3px solid #e5ae27; border-radius: 0 7px 7px 0; color: #6d5c2a; background: #fff9e8; font-size: 12px; line-height: 1.45; }
+.detail-copy { margin: 0 0 17px; color: #64777e; font-size: 12px; line-height: 1.65; }
+.follow-up-box { margin-top: 16px; padding: 15px; border: 1px solid #cae4df; border-radius: 11px; color: #2b6355; background: #f1faf6; }
+.follow-up-box strong { display: block; color: var(--navy); font-size: 13px; }
+.follow-up-box p { margin: 6px 0; color: #60777d; font-size: 12px; line-height: 1.55; }
