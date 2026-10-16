@@ -66,19 +66,90 @@ type Copy = {
   save: string;
   relationship: string;
   notConfigured: string;
+  planner: string;
+  offlineMode: string;
+};
+
+export type PlannerCopy = {
+  plannerTitle: string;
+  plannerSubtitle: string;
+  selectSituation: string;
+  useAnalysisResult: string;
+  checklistFor: string;
+  stepsCompleted: string;
+  markComplete: string;
+  markIncomplete: string;
+  urgentAction: string;
+  resetChecklist: string;
+  newChecklist: string;
+  saveChecklist: string;
+  printChecklist: string;
+  checklistSaved: string;
+  savedChecklists: string;
+  noSavedChecklists: string;
+  openChecklist: string;
+  deleteChecklist: string;
+  backToScenarios: string;
+  neverAskOtp: string;
+  estimatedGuidance: string;
+};
+
+export type OfflineCopy = {
+  offlineTitle: string;
+  offlineSubtitle: string;
+  onlineStatus: string;
+  offlineStatus: string;
+  safetyTips: string;
+  commonScams: string;
+  emergencyContacts: string;
+  audioLessons: string;
+  savedChecklists: string;
+  searchContent: string;
+  allCategories: string;
+  requiresInternet: string;
+  offlineNotice: string;
+  onlineNotice: string;
+  refreshContent: string;
+  playAudio: string;
+  pauseAudio: string;
+  replayAudio: string;
+  audioUnavailable: string;
+  audioInternetNote: string;
+  noSavedChecklistsOffline: string;
+  localStorageNote: string;
+  backToDashboard: string;
+  cachedReady: string;
+  notCachedYet: string;
+  refreshNow: string;
 };
 
 const english: Copy = {
-  welcome: 'Your Digital Safety Bridge', welcomeBody: 'A calm, simple way to check suspicious messages, calls and payment requests.', member: 'Already a Member', newUser: 'New User', chooseLanguage: 'Choose your language', searchLanguage: 'Search languages', continue: 'Continue', signIn: 'Sign in', createAccount: 'Create account', fullName: 'Full name', email: 'Email address', phone: 'Phone number', password: 'Password', confirmPassword: 'Confirm password', dashboard: 'Safety assistant', history: 'My history', learn: 'Learn safety', emergency: 'Emergency help', pasteMessage: 'Paste a message', screenshot: 'Upload screenshot', audio: 'Upload audio', talk: 'Talk to assistant', typeQuestion: 'Type a question', signOut: 'Sign out', greeting: 'Hello! I am your Suraksha Sethu safety assistant.', greetingBody: 'Send me a suspicious message or tell me about a phone call. I will help you understand what to do next.', analyze: 'Check this message', clear: 'Clear', yourMessage: 'Paste or type the message here', trustedContact: 'Trusted family member', save: 'Save details', relationship: 'Relationship', notConfigured: 'This feature needs a connected service. You can still use the text checker.'
+  welcome: 'Your Digital Safety Bridge', planner: 'Action Planner', offlineMode: 'Offline Mode', welcomeBody: 'A calm, simple way to check suspicious messages, calls and payment requests.', member: 'Already a Member', newUser: 'New User', chooseLanguage: 'Choose your language', searchLanguage: 'Search languages', continue: 'Continue', signIn: 'Sign in', createAccount: 'Create account', fullName: 'Full name', email: 'Email address', phone: 'Phone number', password: 'Password', confirmPassword: 'Confirm password', dashboard: 'Safety assistant', history: 'My history', learn: 'Learn safety', emergency: 'Emergency help', pasteMessage: 'Paste a message', screenshot: 'Upload screenshot', audio: 'Upload audio', talk: 'Talk to assistant', typeQuestion: 'Type a question', signOut: 'Sign out', greeting: 'Hello! I am your Suraksha Sethu safety assistant.', greetingBody: 'Send me a suspicious message or tell me about a phone call. I will help you understand what to do next.', analyze: 'Check this message', clear: 'Clear', yourMessage: 'Paste or type the message here', trustedContact: 'Trusted family member', save: 'Save details', relationship: 'Relationship', notConfigured: 'This feature needs a connected service. You can still use the text checker.'
 };
 
 const copies: Record<string, Partial<Copy>> = {
-  hi: { welcome: 'आपका डिजिटल सुरक्षा सेतु', welcomeBody: 'संदिग्ध संदेशों, कॉल और भुगतान अनुरोधों को समझने का सरल तरीका।', member: 'पहले से सदस्य हैं', newUser: 'नया उपयोगकर्ता', chooseLanguage: 'अपनी भाषा चुनें', continue: 'आगे बढ़ें', signIn: 'साइन इन करें', createAccount: 'खाता बनाएं', fullName: 'पूरा नाम', email: 'ईमेल पता', phone: 'फ़ोन नंबर', password: 'पासवर्ड', confirmPassword: 'पासवर्ड की पुष्टि करें', dashboard: 'सुरक्षा सहायक', history: 'मेरा इतिहास', learn: 'सुरक्षा सीखें', emergency: 'आपातकालीन सहायता', pasteMessage: 'संदेश चिपकाएं', screenshot: 'स्क्रीनशॉट डालें', audio: 'ऑडियो डालें', talk: 'सहायक से बात करें', typeQuestion: 'सवाल लिखें', signOut: 'साइन आउट', greeting: 'नमस्ते! मैं आपका सुरक्षा सहायक हूँ।', greetingBody: 'संदिग्ध संदेश भेजें या फ़ोन कॉल के बारे में बताएं। मैं आगे क्या करना है समझाने में मदद करूंगा।', analyze: 'संदेश जांचें', clear: 'हटाएं', yourMessage: 'संदेश यहां लिखें या चिपकाएं', trustedContact: 'भरोसेमंद परिवार का सदस्य', save: 'जानकारी सहेजें', relationship: 'रिश्ता' },
+  hi: { welcome: 'आपका डिजिटल सुरक्षा सेतु', planner: 'एक्शन प्लानर', offlineMode: 'ऑफलाइन मोड', welcomeBody: 'संदिग्ध संदेशों, कॉल और भुगतान अनुरोधों को समझने का सरल तरीका।', member: 'पहले से सदस्य हैं', newUser: 'नया उपयोगकर्ता', chooseLanguage: 'अपनी भाषा चुनें', continue: 'आगे बढ़ें', signIn: 'साइन इन करें', createAccount: 'खाता बनाएं', fullName: 'पूरा नाम', email: 'ईमेल पता', phone: 'फ़ोन नंबर', password: 'पासवर्ड', confirmPassword: 'पासवर्ड की पुष्टि करें', dashboard: 'सुरक्षा सहायक', history: 'मेरा इतिहास', learn: 'सुरक्षा सीखें', emergency: 'आपातकालीन सहायता', pasteMessage: 'संदेश चिपकाएं', screenshot: 'स्क्रीनशॉट डालें', audio: 'ऑडियो डालें', talk: 'सहायक से बात करें', typeQuestion: 'सवाल लिखें', signOut: 'साइन आउट', greeting: 'नमस्ते! मैं आपका सुरक्षा सहायक हूँ।', greetingBody: 'संदिग्ध संदेश भेजें या फ़ोन कॉल के बारे में बताएं। मैं आगे क्या करना है समझाने में मदद करूंगा।', analyze: 'संदेश जांचें', clear: 'हटाएं', yourMessage: 'संदेश यहां लिखें या चिपकाएं', trustedContact: 'भरोसेमंद परिवार का सदस्य', save: 'जानकारी सहेजें', relationship: 'रिश्ता' },
   bn: { welcome: 'আপনার ডিজিটাল সুরক্ষা সেতু', member: 'আগের সদস্য', newUser: 'নতুন ব্যবহারকারী', chooseLanguage: 'আপনার ভাষা বেছে নিন', continue: 'এগিয়ে যান', signIn: 'সাইন ইন', createAccount: 'অ্যাকাউন্ট তৈরি করুন', dashboard: 'সুরক্ষা সহায়ক', history: 'আমার ইতিহাস', learn: 'সুরক্ষা শিখুন', emergency: 'জরুরি সাহায্য', pasteMessage: 'বার্তা পেস্ট করুন', screenshot: 'স্ক্রিনশট আপলোড করুন', talk: 'সহায়কের সাথে কথা বলুন', analyze: 'বার্তা পরীক্ষা করুন' },
-  te: { welcome: 'మీ డిజిటల్ భద్రతా వంతెన', member: 'ఇప్పటికే సభ్యులా', newUser: 'కొత్త వినియోగదారు', chooseLanguage: 'మీ భాషను ఎంచుకోండి', continue: 'కొనసాగించండి', signIn: 'సైన్ ఇన్', createAccount: 'ఖాతా సృష్టించండి', dashboard: 'భద్రతా సహాయకుడు', history: 'నా చరిత్ర', learn: 'భద్రత నేర్చుకోండి', emergency: 'అత్యవసర సహాయం', pasteMessage: 'సందేశాన్ని పేస్ట్ చేయండి', screenshot: 'స్క్రీన్‌షాట్ అప్‌లోడ్ చేయండి', talk: 'సహాయకుడితో మాట్లాడండి', analyze: 'సందేశాన్ని తనిఖీ చేయండి' },
+  te: { welcome: 'మీ డిజిటల్ భద్రతా వంతెన', member: 'ఇప్పటికే సభ్యులా', newUser: 'కొత్త వినియోగదారు', chooseLanguage: 'మీ భాషను ఎంచుకోండి', continue: 'కొనసాగించండి', signIn: 'సైన్ ఇన్', createAccount: 'ఖాతా సృష్టించండి', dashboard: 'భద్రతా సహాయకుడు', history: 'నా చరిత్ర', learn: 'భద్రత నేర్చుకోండి', emergency: 'అత్యవసర సహాయం', pasteMessage: 'సందేశాన్ని పేస్ట్ చేయండి', screenshot: 'స్క్రీన్‌షాట్ అప్‌లోడ్ చేయండి', talk: 'సహాయకుడితో మాట్లాడండి', analyze: 'సందేశాన్ని తనిఖీ చేయండి', planner: 'చర్యా ప్రణాళిక', offlineMode: 'ఆఫ్‌లైన్ మోడ్' },
   ta: { welcome: 'உங்கள் டிஜிட்டல் பாதுகாப்புப் பாலம்', member: 'ஏற்கனவே உறுப்பினரா', newUser: 'புதிய பயனர்', chooseLanguage: 'உங்கள் மொழியைத் தேர்ந்தெடுக்கவும்', continue: 'தொடரவும்', signIn: 'உள்நுழைக', createAccount: 'கணக்கை உருவாக்கவும்', dashboard: 'பாதுகாப்பு உதவியாளர்', history: 'என் வரலாறு', learn: 'பாதுகாப்பைக் கற்றுக்கொள்ளுங்கள்', emergency: 'அவசர உதவி', pasteMessage: 'செய்தியை ஒட்டவும்', screenshot: 'ஸ்கிரீன்ஷாட்டைப் பதிவேற்றவும்', talk: 'உதவியாளருடன் பேசுங்கள்', analyze: 'செய்தியைச் சரிபார்க்கவும்' },
   mr: { welcome: 'तुमचा डिजिटल सुरक्षा सेतू', member: 'आधीच सदस्य आहात', newUser: 'नवीन वापरकर्ता', chooseLanguage: 'तुमची भाषा निवडा', continue: 'पुढे जा', signIn: 'साइन इन', createAccount: 'खाते तयार करा', dashboard: 'सुरक्षा सहाय्यक', history: 'माझा इतिहास', learn: 'सुरक्षा शिका', emergency: 'आपत्कालीन मदत', pasteMessage: 'संदेश पेस्ट करा', screenshot: 'स्क्रीनशॉट अपलोड करा', talk: 'सहाय्यकाशी बोला', analyze: 'संदेश तपासा' },
   gu: { welcome: 'તમારો ડિજિટલ સુરક્ષા સેતુ', member: 'પહેલેથી સભ્ય છો', newUser: 'નવા વપરાશકર્તા', chooseLanguage: 'તમારી ભાષા પસંદ કરો', continue: 'ચાલુ રાખો', signIn: 'સાઇન ઇન', createAccount: 'ખાતું બનાવો', dashboard: 'સુરક્ષા સહાયક', history: 'મારો ઇતિહાસ', learn: 'સુરક્ષા શીખો', emergency: 'કટોકટી મદદ', pasteMessage: 'સંદેશ પેસ્ટ કરો', screenshot: 'સ્ક્રીનશોટ અપલોડ કરો', talk: 'સહાયક સાથે વાત કરો', analyze: 'સંદેશ તપાસો' },
+};
+
+const plannerEnglish: PlannerCopy = {
+  plannerTitle: 'Smart Safety Action Planner', plannerSubtitle: 'Get a personalized step-by-step checklist for your situation.', selectSituation: 'Select your situation', useAnalysisResult: 'Use my last scan result', checklistFor: 'Checklist for', stepsCompleted: 'steps completed', markComplete: 'Mark as done', markIncomplete: 'Mark as not done', urgentAction: 'Urgent', resetChecklist: 'Reset checklist', newChecklist: 'Start a new checklist', saveChecklist: 'Save this checklist', printChecklist: 'Print checklist', checklistSaved: 'Checklist saved. You can open it offline later.', savedChecklists: 'Saved checklists', noSavedChecklists: 'No saved checklists yet. Complete a checklist and save it to access it offline.', openChecklist: 'Open', deleteChecklist: 'Delete', backToScenarios: 'Back to situations', neverAskOtp: 'This planner will never ask you for your OTP, PIN, password, or banking details.', estimatedGuidance: 'This is general safety guidance, not legal or financial advice. For confirmed fraud, always contact 1930.'
+};
+
+const plannerTelugu: PlannerCopy = {
+  plannerTitle: 'స్మార్ట్ భద్రతా చర్యా ప్రణాళిక', plannerSubtitle: 'మీ పరిస్థితికి వ్యక్తిగత దశలవారీ చెక్‌లిస్ట్ పొందండి.', selectSituation: 'మీ పరిస్థితిని ఎంచుకోండి', useAnalysisResult: 'నా చివరి స్కాన్ ఫలితాన్ని ఉపయోగించండి', checklistFor: 'దీనికి చెక్‌లిస్ట్', stepsCompleted: 'దశలు పూర్తయ్యాయి', markComplete: 'పూర్తయిందిగా గుర్తించండి', markIncomplete: 'పూర్తి కాలేదుగా గుర్తించండి', urgentAction: 'అత్యవసరం', resetChecklist: 'చెక్‌లిస్ట్ రీసెట్ చేయండి', newChecklist: 'కొత్త చెక్‌లిస్ట్ ప్రారంభించండి', saveChecklist: 'ఈ చెక్‌లిస్ట్ సేవ్ చేయండి', printChecklist: 'చెక్‌లిస్ట్ ప్రింట్ చేయండి', checklistSaved: 'చెక్‌లిస్ట్ సేవ్ అయింది. ఆఫ్‌లైన్‌లో తర్వాత తెరవవచ్చు.', savedChecklists: 'సేవ్ చేసిన చెక్‌లిస్ట్‌లు', noSavedChecklists: 'సేవ్ చేసిన చెక్‌లిస్ట్‌లు లేవు. ఒకదాన్ని పూర్తి చేసి సేవ్ చేయండి.', openChecklist: 'తెరవండి', deleteChecklist: 'తొలగించండి', backToScenarios: 'పరిస్థితులకు తిరిగి వెళ్ళండి', neverAskOtp: 'ఈ ప్రణాళిక మీ OTP, PIN, పాస్‌వర్డ్ లేదా బ్యాంకింగ్ వివరాలను ఎప్పుడూ అడగదు.', estimatedGuidance: 'ఇది సాధారణ భద్రతా మార్గదర్శకత్వం, న్యాయ లేదా ఆర్థిక సలహా కాదు.'
+};
+
+const offlineEnglish: OfflineCopy = {
+  offlineTitle: 'Offline Safety Mode', offlineSubtitle: 'Access safety tips, lessons, and saved checklists without internet.', onlineStatus: 'You are online', offlineStatus: 'You are offline', safetyTips: 'Safety Tips', commonScams: 'Common Scams', emergencyContacts: 'Emergency Contacts', audioLessons: 'Audio Lessons', savedChecklists: 'Saved Checklists', searchContent: 'Search safety content', allCategories: 'All categories', requiresInternet: 'This action requires an internet connection', offlineNotice: 'You are offline. Saved content is available below.', onlineNotice: 'You are online. All features are available.', refreshContent: 'Refresh content', playAudio: 'Play audio', pauseAudio: 'Pause', replayAudio: 'Replay', audioUnavailable: 'Audio playback is not available on this device or browser.', audioInternetNote: 'Text-to-speech uses your device built-in voice. Quality and language support vary by device.', noSavedChecklistsOffline: 'No saved checklists found. Save a checklist while online to access it here later.', localStorageNote: 'Saved checklists are stored on this device only. They may be unavailable on another device or after clearing browser data.', backToDashboard: 'Back to dashboard', cachedReady: 'Offline content is ready', notCachedYet: 'Offline content is loading. Visit this page while online to cache it for offline use.', refreshNow: 'Refresh now'
+};
+
+const offlineTelugu: OfflineCopy = {
+  offlineTitle: 'ఆఫ్‌లైన్ భద్రతా మోడ్', offlineSubtitle: 'ఇంటర్నెట్ లేకుండా భద్రతా చిట్కాలు, పాఠాలు మరియు సేవ్ చేసిన చెక్‌లిస్ట్‌లను యాక్సెస్ చేయండి.', onlineStatus: 'మీరు ఆన్‌లైన్‌లో ఉన్నారు', offlineStatus: 'మీరు ఆఫ్‌లైన్‌లో ఉన్నారు', safetyTips: 'భద్రతా చిట్కాలు', commonScams: 'సాధారణ మోసాలు', emergencyContacts: 'అత్యవసర పరిచయాలు', audioLessons: 'ఆడియో పాఠాలు', savedChecklists: 'సేవ్ చేసిన చెక్‌లిస్ట్‌లు', searchContent: 'భద్రతా కంటెంట్ శోధించండి', allCategories: 'అన్ని వర్గాలు', requiresInternet: 'ఈ చర్యకు ఇంటర్నెట్ అవసరం', offlineNotice: 'మీరు ఆఫ్‌లైన్‌లో ఉన్నారు. సేవ్ చేసిన కంటెంట్ కింద అందుబాటులో ఉంది.', onlineNotice: 'మీరు ఆన్‌లైన్‌లో ఉన్నారు. అన్ని ఫీచర్లు అందుబాటులో ఉన్నాయి.', refreshContent: 'కంటెంట్ రిఫ్రెష్ చేయండి', playAudio: 'ఆడియో ప్లే చేయండి', pauseAudio: 'ఆపండి', replayAudio: 'మళ్లీ ప్లే చేయండి', audioUnavailable: 'ఈ పరికరంలో ఆడియో ప్లేబ్యాక్ అందుబాటులో లేదు.', audioInternetNote: 'టెక్స్ట్-టు-స్పీచ్ మీ పరికరం యొక్క అంతర్గత వాయిస్‌ను ఉపయోగిస్తుంది.', noSavedChecklistsOffline: 'సేవ్ చేసిన చెక్‌లిస్ట్‌లు లేవు. ఆన్‌లైన్‌లో ఉన్నప్పుడు సేవ్ చేయండి.', localStorageNote: 'సేవ్ చేసిన చెక్‌లిస్ట్‌లు ఈ పరికరంలో మాత్రమే నిల్వ చేయబడతాయి.', backToDashboard: 'డాష్‌బోర్డ్‌కు తిరిగి వెళ్ళండి', cachedReady: 'ఆఫ్‌లైన్ కంటెంట్ సిద్ధంగా ఉంది', notCachedYet: 'ఆఫ్‌లైన్ కంటెంట్ లోడ్ అవుతోంది.', refreshNow: 'ఇప్పుడు రిఫ్రెష్ చేయండి'
 };
 
 export type SafetyCopy = {
@@ -133,6 +204,16 @@ export function getSafetyCopy(code: string): SafetyCopy {
   if (code === 'hi') return safetyHindi;
   if (code === 'te') return safetyTelugu;
   return safetyEnglish;
+}
+
+export function getPlannerCopy(code: string): PlannerCopy {
+  if (code === 'te') return plannerTelugu;
+  return plannerEnglish;
+}
+
+export function getOfflineCopy(code: string): OfflineCopy {
+  if (code === 'te') return offlineTelugu;
+  return offlineEnglish;
 }
 
 export function isRtl(code: string): boolean {
